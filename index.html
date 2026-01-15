@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONEマインドセット音声プログラム 端末インストール手順</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .header-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .ss-container {
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            min-height: 320px;
+        }
+
+        .ss-container img {
+            height: 100%;
+            max-height: 400px;
+            width: auto;
+            object-fit: contain;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-badge {
+            background: #1e3a8a;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .copy-area {
+            background: #ffffff;
+            border: 2px dashed #3b82f6;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-area:hover {
+            background: #eff6ff;
+            transform: translateY(-2px);
+        }
+
+        .copy-area:active {
+            transform: translateY(0);
+        }
+
+        .success-toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #059669;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: none;
+            z-index: 100;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        @keyframes pointer-move {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(4px); }
+        }
+        .animate-pointer {
+            animation: pointer-move 1s infinite;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Header -->
+    <header class="header-gradient pt-16 pb-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-white">
+                ONEマインドセット音声プログラム<br>
+                端末インストール手順
+            </h1>
+            <p class="text-blue-100 opacity-90 text-sm md:text-base">
+                下記の手順にて、ぜひ音声プログラムを端末インストールしてみて下さい。
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 -mt-12 space-y-6">
+
+        <!-- App Preparation -->
+        <div class="bg-white p-6 rounded-2xl shadow-xl border border-blue-100 mb-10 text-center">
+            <h2 class="font-bold text-lg mb-4 flex items-center justify-center gap-2 text-blue-900">
+                <i class="fas fa-cloud-download-alt text-blue-500"></i> 
+                アプリを準備
+            </h2>
+            <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto">
+                <a href="https://apps.apple.com/jp/app/youtube-music/id1017492454" target="_blank" class="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-xl hover:bg-blue-50 border border-slate-100 transition group">
+                    <i class="fab fa-apple text-2xl mb-1 group-hover:text-blue-600"></i>
+                    <span class="text-[10px] font-bold">App Store</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music" target="_blank" class="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-xl hover:bg-blue-50 border border-slate-100 transition group">
+                    <i class="fab fa-google-play text-xl mb-1 group-hover:text-green-600"></i>
+                    <span class="text-[10px] font-bold">Google Play</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step-card grid md:grid-cols-5 items-stretch">
+            <div class="ss-container md:col-span-2 p-4">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/rB6p4XJLhhBb6JVqWu19o5XzAIdQZtx0PsnGld5W.jpg" alt="Step 1">
+            </div>
+            <div class="p-8 md:col-span-3 flex flex-col justify-center">
+                <span class="step-badge mb-3">STEP 1</span>
+                <h3 class="font-bold text-xl text-blue-900 mb-2">ライブラリを開く</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">YouTube Musicアプリを起動し、右下のメニューにある「ライブラリ」をタップしてください。</p>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card grid md:grid-cols-5 items-stretch">
+            <div class="ss-container md:col-span-2 p-4">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/8BkujsQk7R9AEITkwt3QPPg5yPD2LLveJeZlVan1.jpg" alt="Step 2">
+            </div>
+            <div class="p-8 md:col-span-3 flex flex-col justify-center">
+                <span class="step-badge mb-3">STEP 2</span>
+                <h3 class="font-bold text-xl text-blue-900 mb-2">ポッドキャストに切り替え</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">画面上部のメニュータブをスライドさせ、「ポッドキャスト」を選択します。</p>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card grid md:grid-cols-5 items-stretch">
+            <div class="ss-container md:col-span-2 p-4">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/yt6ieD6aIwxb9MHEkW2FoOb3MbbpRrP8WjXNcX9S.jpg" alt="Step 3">
+            </div>
+            <div class="p-8 md:col-span-3 flex flex-col justify-center">
+                <span class="step-badge mb-3">STEP 3</span>
+                <h3 class="font-bold text-xl text-blue-900 mb-2">追加ボタンをタップ</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">画面内にある「ポッドキャストを追加」ボタンを押して、追加用メニューを開きます。</p>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card grid md:grid-cols-5 items-stretch">
+            <div class="ss-container md:col-span-2 p-4">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/ncxFN4Dwm1gBxUMthig0RFCJ4bpPch89j7s2sn8V.jpg" alt="Step 4">
+            </div>
+            <div class="p-8 md:col-span-3 flex flex-col justify-center">
+                <span class="step-badge mb-3">STEP 4</span>
+                <h3 class="font-bold text-xl text-blue-900 mb-2">RSSフィードを選択</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">表示された選択肢の中から「RSSフィードで追加」をタップします。</p>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card grid md:grid-cols-5 items-stretch border-blue-200 bg-blue-50/20 shadow-blue-900/5 shadow-2xl">
+            <div class="ss-container md:col-span-2 p-4">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/QWDDodGKXW2MyWGYV4WL8C1mYCbAEzcUqbrOhAhM.jpg" alt="Step 5">
+            </div>
+            <div class="p-8 md:col-span-3 flex flex-col justify-center">
+                <span class="step-badge mb-3 text-white">STEP 5</span>
+                <h3 class="font-bold text-xl text-blue-900 mb-2 text-blue-600">URLを貼り付けて完了</h3>
+                <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                    以下の枠内をコピーし、アプリの入力欄に貼り付けて「追加」を押してください。
+                </p>
+
+                <!-- Copy Area -->
+                <div class="copy-area p-5 text-center shadow-lg" onclick="copyUrl()">
+                    <p class="text-[10px] text-blue-600 font-bold mb-2">
+                        <i class="fas fa-magic mr-1"></i> タップするとコピーできます
+                    </p>
+                    <div id="urlText" class="text-[11px] font-mono text-slate-700 break-all bg-white p-4 rounded-lg border border-blue-100 shadow-inner leading-relaxed">
+                        https://Kazu-07.github.io/one-podcast/podcast.xml
+                    </div>
+                    <div class="mt-4 text-[10px] text-blue-500 font-bold flex items-center justify-center gap-2 animate-pointer">
+                        <i class="fas fa-hand-pointer text-sm"></i> ここをタップ
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Message -->
+        <div class="text-center py-16 bg-white rounded-3xl border border-slate-100 shadow-sm mt-12">
+            <div class="inline-block p-5 bg-blue-50 rounded-full mb-6 text-blue-600">
+                <i class="fas fa-envelope text-3xl"></i>
+            </div>
+            <h3 class="font-bold text-xl text-blue-900">お問い合わせ</h3>
+            <p class="text-sm text-slate-400 mt-3 px-6 leading-relaxed">
+                ※分からないことがあれば下記のメールアドレスあてご連絡ください。<br>
+                <a href="mailto:info@buppanone-kazu.co.jp" class="text-blue-600 font-bold underline">info@buppanone-kazu.co.jp</a>
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Toast -->
+    <div id="toast" class="success-toast">
+        <i class="fas fa-check-circle mr-2"></i> コピーしました！
+    </div>
+
+    <script>
+        function copyUrl() {
+            const urlText = document.getElementById('urlText').innerText.trim();
+            const el = document.createElement('textarea');
+            el.value = urlText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const toast = document.getElementById('toast');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
