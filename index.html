@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONEマインドセット音声プログラム 端末インストール手順</title>
+    <title>ONEマインドセット 音声プログラム 端末インストール手順</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -26,23 +26,27 @@
             overflow: hidden;
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+        }
+
+        .step-header {
+            background-color: #f1f5f9;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .ss-container {
-            background-color: #f1f5f9;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            min-height: 320px;
+            padding: 1.5rem;
         }
 
         .ss-container img {
-            height: 100%;
-            max-height: 400px;
-            width: auto;
-            object-fit: contain;
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            border-radius: 12px;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
@@ -51,9 +55,10 @@
             color: white;
             padding: 4px 12px;
             border-radius: 50px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: bold;
             display: inline-block;
+            margin-bottom: 0.5rem;
         }
 
         .copy-area {
@@ -67,10 +72,6 @@
         .copy-area:hover {
             background: #eff6ff;
             transform: translateY(-2px);
-        }
-
-        .copy-area:active {
-            transform: translateY(0);
         }
 
         .success-toast {
@@ -95,6 +96,12 @@
         .animate-pointer {
             animation: pointer-move 1s infinite;
         }
+
+        .yt-music-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+        }
     </style>
 </head>
 <body class="pb-20">
@@ -102,98 +109,112 @@
     <!-- Header -->
     <header class="header-gradient pt-16 pb-24 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-white">
-                ONEマインドセット音声プログラム<br>
+            <h1 class="text-2xl md:text-4xl font-extrabold mb-4 leading-tight text-white">
+                ONEマインドセット<br>
+                音声プログラム<br>
                 端末インストール手順
             </h1>
             <p class="text-blue-100 opacity-90 text-sm md:text-base">
-                下記の手順にて、ぜひ音声プログラムを端末インストールしてみて下さい。
+                下記の手順にて、ぜひ音声プログラムをインストールしてみて下さい。
             </p>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 -mt-12 space-y-6">
+    <main class="max-w-3xl mx-auto px-4 -mt-12 space-y-10">
 
-        <!-- App Preparation -->
-        <div class="bg-white p-6 rounded-2xl shadow-xl border border-blue-100 mb-10 text-center">
-            <h2 class="font-bold text-lg mb-4 flex items-center justify-center gap-2 text-blue-900">
-                <i class="fas fa-cloud-download-alt text-blue-500"></i> 
-                アプリを準備
-            </h2>
-            <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto">
-                <a href="https://apps.apple.com/jp/app/youtube-music/id1017492454" target="_blank" class="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-xl hover:bg-blue-50 border border-slate-100 transition group">
-                    <i class="fab fa-apple text-2xl mb-1 group-hover:text-blue-600"></i>
-                    <span class="text-[10px] font-bold">App Store</span>
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music" target="_blank" class="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-xl hover:bg-blue-50 border border-slate-100 transition group">
-                    <i class="fab fa-google-play text-xl mb-1 group-hover:text-green-600"></i>
-                    <span class="text-[10px] font-bold">Google Play</span>
-                </a>
+        <!-- STEP 1: App Preparation -->
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-badge">STEP 1</span>
+                <h3 class="font-bold text-lg text-blue-900">YouTube Music アプリを準備</h3>
+                <p class="text-xs text-slate-500 mt-1">まずは専用アプリをスマートフォンにインストールします。</p>
+            </div>
+            <div class="p-8 text-center bg-white">
+                <!-- YouTube Music Logo SVG -->
+                <svg class="yt-music-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#FF0000"/>
+                    <path d="M12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6ZM10.5 14.5V9.5L14.5 12L10.5 14.5Z" fill="white"/>
+                    <circle cx="12" cy="12" r="8" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+                </svg>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-sm mx-auto">
+                    <a href="https://apps.apple.com/jp/app/youtube-music/id1017492454" target="_blank" class="flex items-center justify-center gap-3 p-4 bg-slate-50 rounded-xl hover:bg-blue-50 border border-slate-100 transition group shadow-sm">
+                        <i class="fab fa-apple text-2xl group-hover:text-blue-600"></i>
+                        <div class="text-left">
+                            <p class="text-[8px] text-slate-400 leading-none">Download on the</p>
+                            <p class="text-xs font-bold">App Store</p>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music" target="_blank" class="flex items-center justify-center gap-3 p-4 bg-slate-50 rounded-xl hover:bg-blue-50 border border-slate-100 transition group shadow-sm">
+                        <i class="fab fa-google-play text-xl group-hover:text-green-600"></i>
+                        <div class="text-left">
+                            <p class="text-[8px] text-slate-400 leading-none">Get it on</p>
+                            <p class="text-xs font-bold">Google Play</p>
+                        </div>
+                    </a>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-6 font-bold">※赤いアイコンの「YouTube Music」アプリをご使用ください</p>
             </div>
         </div>
 
-        <!-- Step 1 -->
-        <div class="step-card grid md:grid-cols-5 items-stretch">
-            <div class="ss-container md:col-span-2 p-4">
-                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/rB6p4XJLhhBb6JVqWu19o5XzAIdQZtx0PsnGld5W.jpg" alt="Step 1">
+        <!-- STEP 2 -->
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-badge">STEP 2</span>
+                <h3 class="font-bold text-lg text-blue-900">ライブラリを開く</h3>
+                <p class="text-xs text-slate-500 mt-1">アプリを起動し、右下の「ライブラリ」をタップしてください。</p>
             </div>
-            <div class="p-8 md:col-span-3 flex flex-col justify-center">
-                <span class="step-badge mb-3">STEP 1</span>
-                <h3 class="font-bold text-xl text-blue-900 mb-2">ライブラリを開く</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">YouTube Musicアプリを起動し、右下のメニューにある「ライブラリ」をタップしてください。</p>
-            </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="step-card grid md:grid-cols-5 items-stretch">
-            <div class="ss-container md:col-span-2 p-4">
-                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/8BkujsQk7R9AEITkwt3QPPg5yPD2LLveJeZlVan1.jpg" alt="Step 2">
-            </div>
-            <div class="p-8 md:col-span-3 flex flex-col justify-center">
-                <span class="step-badge mb-3">STEP 2</span>
-                <h3 class="font-bold text-xl text-blue-900 mb-2">ポッドキャストに切り替え</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">画面上部のメニュータブをスライドさせ、「ポッドキャスト」を選択します。</p>
+            <div class="ss-container">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/rB6p4XJLhhBb6JVqWu19o5XzAIdQZtx0PsnGld5W.jpg" alt="ライブラリを選択">
             </div>
         </div>
 
-        <!-- Step 3 -->
-        <div class="step-card grid md:grid-cols-5 items-stretch">
-            <div class="ss-container md:col-span-2 p-4">
-                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/yt6ieD6aIwxb9MHEkW2FoOb3MbbpRrP8WjXNcX9S.jpg" alt="Step 3">
+        <!-- STEP 3 -->
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-badge">STEP 3</span>
+                <h3 class="font-bold text-lg text-blue-900">ポッドキャストに切り替え</h3>
+                <p class="text-xs text-slate-500 mt-1">上部のメニュータブをスライドさせ、「ポッドキャスト」を選択します。</p>
             </div>
-            <div class="p-8 md:col-span-3 flex flex-col justify-center">
-                <span class="step-badge mb-3">STEP 3</span>
-                <h3 class="font-bold text-xl text-blue-900 mb-2">追加ボタンをタップ</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">画面内にある「ポッドキャストを追加」ボタンを押して、追加用メニューを開きます。</p>
-            </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="step-card grid md:grid-cols-5 items-stretch">
-            <div class="ss-container md:col-span-2 p-4">
-                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/ncxFN4Dwm1gBxUMthig0RFCJ4bpPch89j7s2sn8V.jpg" alt="Step 4">
-            </div>
-            <div class="p-8 md:col-span-3 flex flex-col justify-center">
-                <span class="step-badge mb-3">STEP 4</span>
-                <h3 class="font-bold text-xl text-blue-900 mb-2">RSSフィードを選択</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">表示された選択肢の中から「RSSフィードで追加」をタップします。</p>
+            <div class="ss-container">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/8BkujsQk7R9AEITkwt3QPPg5yPD2LLveJeZlVan1.jpg" alt="ポッドキャストを選択">
             </div>
         </div>
 
-        <!-- Step 5 -->
-        <div class="step-card grid md:grid-cols-5 items-stretch border-blue-200 bg-blue-50/20 shadow-blue-900/5 shadow-2xl">
-            <div class="ss-container md:col-span-2 p-4">
-                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/QWDDodGKXW2MyWGYV4WL8C1mYCbAEzcUqbrOhAhM.jpg" alt="Step 5">
+        <!-- STEP 4 -->
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-badge">STEP 4</span>
+                <h3 class="font-bold text-lg text-blue-900">追加ボタンをタップ</h3>
+                <p class="text-xs text-slate-500 mt-1">画面内にある「ポッドキャストを追加」ボタンを押します。</p>
             </div>
-            <div class="p-8 md:col-span-3 flex flex-col justify-center">
-                <span class="step-badge mb-3 text-white">STEP 5</span>
-                <h3 class="font-bold text-xl text-blue-900 mb-2 text-blue-600">URLを貼り付けて完了</h3>
-                <p class="text-sm text-slate-500 mb-6 leading-relaxed">
-                    以下の枠内をコピーし、アプリの入力欄に貼り付けて「追加」を押してください。
-                </p>
+            <div class="ss-container">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/yt6ieD6aIwxb9MHEkW2FoOb3MbbpRrP8WjXNcX9S.jpg" alt="ポッドキャストを追加">
+            </div>
+        </div>
 
+        <!-- STEP 5 -->
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-badge">STEP 5</span>
+                <h3 class="font-bold text-lg text-blue-900">RSSフィードを選択</h3>
+                <p class="text-xs text-slate-500 mt-1">メニューから「RSSフィードで追加」をタップします。</p>
+            </div>
+            <div class="ss-container">
+                <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/ncxFN4Dwm1gBxUMthig0RFCJ4bpPch89j7s2sn8V.jpg" alt="RSSフィードで追加">
+            </div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="step-card border-blue-200 bg-blue-50/10">
+            <div class="step-header bg-blue-50/50">
+                <span class="step-badge">STEP 6</span>
+                <h3 class="font-bold text-lg text-blue-600">URLを貼り付けて完了</h3>
+                <p class="text-xs text-slate-500 mt-1">下の枠をタップしてコピーし、アプリに貼り付けて「追加」を押してください。</p>
+            </div>
+            <div class="p-6">
                 <!-- Copy Area -->
-                <div class="copy-area p-5 text-center shadow-lg" onclick="copyUrl()">
+                <div class="copy-area p-5 text-center shadow-sm mb-6" onclick="copyUrl()">
                     <p class="text-[10px] text-blue-600 font-bold mb-2">
                         <i class="fas fa-magic mr-1"></i> タップするとコピーできます
                     </p>
@@ -204,17 +225,21 @@
                         <i class="fas fa-hand-pointer text-sm"></i> ここをタップ
                     </div>
                 </div>
+
+                <div class="ss-container pt-0">
+                    <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/yL3LZRmZIOUN/QWDDodGKXW2MyWGYV4WL8C1mYCbAEzcUqbrOhAhM.jpg" alt="RSSフィードのURL入力">
+                </div>
             </div>
         </div>
 
         <!-- Final Message -->
-        <div class="text-center py-16 bg-white rounded-3xl border border-slate-100 shadow-sm mt-12">
+        <div class="text-center py-16 bg-white rounded-3xl border border-slate-100 shadow-sm">
             <div class="inline-block p-5 bg-blue-50 rounded-full mb-6 text-blue-600">
                 <i class="fas fa-envelope text-3xl"></i>
             </div>
             <h3 class="font-bold text-xl text-blue-900">お問い合わせ</h3>
             <p class="text-sm text-slate-400 mt-3 px-6 leading-relaxed">
-                ※分からないことがあれば下記のメールアドレスあてご連絡ください。<br>
+                ※分からないことがあれば下記のメールアドレスあてにご連絡ください。<br>
                 <a href="mailto:info@buppanone-kazu.co.jp" class="text-blue-600 font-bold underline">info@buppanone-kazu.co.jp</a>
             </p>
         </div>
